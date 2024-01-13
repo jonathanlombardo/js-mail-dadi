@@ -15,7 +15,7 @@
     <meta name="author" content="Jibbo" />
 
     <!-- --FONTAWSOME icon -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- --BOOTSTRAP icon -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" /> -->
@@ -41,7 +41,13 @@
         <input type="mail" id="mail-input" class="form-control" placeholder="jonny@mail.com" autofocus />
         <div id="validation-mail" class="text-danger fs-6">La mail non è registrata.</div>
         <label for="pwd-input" class="form-label mt-2">Inserisci la password</label>
-        <input type="password" id="pwd-input" class="form-control" placeholder="jonny" />
+        <div class="input-group">
+          <input type="password" id="pwd-input" class="form-control" placeholder="jonny" />
+          <span id="view-pwd" class="input-group-text pointer">
+            <i id="show-pwd" class="fa-solid fa-eye"></i>
+            <i id="hide-pwd" class="fa-solid fa-eye-slash d-none"></i>
+          </span>
+        </div>
         <div id="validation-pwd" class="text-danger fs-6">La password non corrisponde.</div>
         <button type="button" id="log-button" class="btn btn-primary my-3">Accedi</button>
         <button type="reset" id="reset-button" class="btn btn-warning my-3">Reset</button>

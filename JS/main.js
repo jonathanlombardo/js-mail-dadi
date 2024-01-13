@@ -6,6 +6,11 @@ const resetButton = document.querySelector("#reset-button");
 const logForm = document.querySelector("form");
 const mailValidationElement = document.querySelector("#validation-mail");
 const pwdValidationElement = document.querySelector("#validation-pwd");
+const pwdShowElement = document.querySelector("#show-pwd");
+const pwdHideElement = document.querySelector("#hide-pwd");
+const pwdViewElement = document.querySelector("#view-pwd");
+
+let pwdShow = false;
 let userName;
 
 mailValidationElement.classList.add("d-none");
@@ -21,6 +26,20 @@ mailInput.addEventListener("keypress", function (event) {
 pwdInput.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     logButton.click();
+  }
+});
+
+pwdViewElement.addEventListener("click", function () {
+  if (pwdShow) {
+    pwdInput.type = "password";
+    pwdHideElement.classList.add("d-none");
+    pwdShowElement.classList.remove("d-none");
+    pwdShow = false;
+  } else {
+    pwdInput.type = "text";
+    pwdHideElement.classList.remove("d-none");
+    pwdShowElement.classList.add("d-none");
+    pwdShow = true;
   }
 });
 
