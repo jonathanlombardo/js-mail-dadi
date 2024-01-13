@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- --TITLE AND FAVICON -->
-    <title>NewProject</title>
-    <link rel="icon" href="./icon_monkey.png" />
+    <title>DiceGame | Login</title>
+    <link rel="icon" href="./favicon.svg" />
 
     <!-- --SEO INFO -->
     <meta name="description" content="Boilerplate for new NewProject" />
@@ -38,9 +38,13 @@
       <h1 id="js_result" class="mb-3">Login</h1>
       <form class="mt-3">
         <label for="mail-input" class="form-label">Inserisci la mail</label>
-        <input type="mail" id="mail-input" class="form-control" placeholder="jonny@mail.com" />
+        <input type="mail" id="mail-input" class="form-control" placeholder="jonny@mail.com" autofocus />
         <div id="validation-mail" class="text-danger fs-6">La mail non è registrata.</div>
-        <button type="button" id="mail-button" class="btn btn-primary my-3">Accedi</button>
+        <label for="pwd-input" class="form-label mt-2">Inserisci la password</label>
+        <input type="password" id="pwd-input" class="form-control" placeholder="jonny" />
+        <div id="validation-pwd" class="text-danger fs-6">La password non corrisponde.</div>
+        <button type="button" id="log-button" class="btn btn-primary my-3">Accedi</button>
+        <button type="reset" id="reset-button" class="btn btn-warning my-3">Reset</button>
       </form>
       <!-- <code id="js_result" class="fs-3 d-block my-3"></code> -->
     </div>

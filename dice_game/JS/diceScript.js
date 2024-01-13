@@ -2,9 +2,25 @@ const resultElement = document.querySelector("#js_result");
 const diceButton = document.querySelector("#go-button");
 const playerDiceElement = document.querySelector("#player-dice");
 const cpuDiceElement = document.querySelector("#cpu-dice");
+const exitButton = document.querySelector("#exit-button");
+const titleElement = document.querySelector("h1");
+const userName = sessionStorage.getItem("userName");
 let winner;
 
+titleElement.innerText = `Welcome back ${userName}`;
+
 resultElement.classList.add("d-none");
+
+exitButton.addEventListener("click", function () {
+  sessionStorage.removeItem("userName");
+  document.location.href = "../index.html";
+});
+
+addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    diceButton.click();
+  }
+});
 
 diceButton.addEventListener("click", function () {
   const cpuDice = Math.floor(Math.random() * 6) + 1;
