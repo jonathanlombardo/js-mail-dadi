@@ -17,13 +17,7 @@ mailValidationElement.classList.add("d-none");
 pwdValidationElement.classList.add("d-none");
 mailInput.value = "";
 
-mailInput.addEventListener("keypress", function (event) {
-  if (event.key === "Enter") {
-    logButton.click();
-  }
-});
-
-pwdInput.addEventListener("keypress", function (event) {
+addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     logButton.click();
   }
